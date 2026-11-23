@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio acadêmico de Otávio Fernando, estudante de Tecnologia em Ciência de Dados.">
+  <title>Otávio Fernando | Portfólio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --fundo: #0b1220;
+      --painel: #121e31;
+      --painel-claro: #192941;
+      --texto: #f3f6fc;
+      --suave: #b7c4d8;
+      --destaque: #69b7ff;
+      --linha: rgba(255,255,255,.11);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--texto);
+      background:
+        radial-gradient(circle at 85% 10%, rgba(43,119,190,.20), transparent 28rem),
+        var(--fundo);
+      line-height: 1.6;
+    }
+
+    .container { width: min(100% - 40px, 1050px); margin: 0 auto; }
+
+    header { padding: 24px 0; border-bottom: 1px solid var(--linha); }
+
+    .topo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .marca { font-size: 1.05rem; font-weight: 700; }
+    .marca span, h1 span { color: var(--destaque); }
+
+    nav { display: flex; flex-wrap: wrap; gap: 22px; }
+    nav a {
+      color: var(--suave);
+      text-decoration: none;
+      font-size: .92rem;
+      transition: color .2s;
+    }
+    nav a:hover { color: var(--destaque); }
+
+    .apresentacao { padding: 88px 0 72px; }
+
+    .etiqueta {
+      display: inline-block;
+      color: var(--destaque);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      max-width: 760px;
+      font-size: clamp(2.3rem, 6vw, 4.4rem);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    .resumo { max-width: 650px; color: var(--suave); font-size: 1.08rem; margin-bottom: 28px; }
+
+    .botao {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      background: var(--destaque);
+      color: #071323;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .2s, background .2s;
+    }
+    .botao:hover { background: #91ccff; transform: translateY(-2px); }
+
+    section { padding: 32px 0 58px; }
+    .titulo-secao { font-size: clamp(1.65rem, 4vw, 2.1rem); margin-bottom: 22px; }
+    .subtitulo { color: var(--suave); max-width: 700px; margin-top: -12px; margin-bottom: 24px; }
+
+    .sobre, .bloco {
+      background: var(--painel);
+      border: 1px solid var(--linha);
+      border-radius: 14px;
+      padding: 25px;
+    }
+
+    .sobre p { color: var(--suave); margin: 8px 0; }
+    .sobre strong { color: var(--texto); }
+
+    .projeto-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .bloco { min-height: 190px; transition: transform .2s, border-color .2s; }
+    .bloco:hover { transform: translateY(-4px); border-color: rgba(105,183,255,.55); }
+    .numero { color: var(--destaque); font-size: .82rem; font-weight: 700; letter-spacing: 1px; }
+    .bloco h3 { font-size: 1.2rem; margin: 8px 0 10px; }
+    .bloco p { color: var(--suave); }
+
+    .projeto-info {
+      margin-top: 18px;
+      padding: 20px 22px;
+      border-radius: 12px;
+      background: var(--painel-claro);
+      border: 1px solid var(--linha);
+    }
+    .projeto-info p { color: var(--suave); }
+    .projeto-info strong { color: var(--texto); }
+
+    .contato {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      background: linear-gradient(120deg, #14243a, #102039);
+      border: 1px solid var(--linha);
+      border-radius: 14px;
+      padding: 25px;
+    }
+    .contato p { color: var(--suave); }
+    .contato a { color: var(--destaque); font-weight: 700; text-decoration: none; }
+    .contato a:hover { text-decoration: underline; }
+
+    footer {
+      border-top: 1px solid var(--linha);
+      color: #8fa0b8;
+      text-align: center;
+      padding: 24px 0;
+      font-size: .88rem;
+    }
+
+    @media (max-width: 650px) {
+      .container { width: min(100% - 28px, 1050px); }
+      .topo { align-items: flex-start; flex-direction: column; }
+      nav { gap: 15px; }
+      .apresentacao { padding: 65px 0 48px; }
+      .projeto-grid { grid-template-columns: 1fr; }
+      .bloco { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topo">
+      <div class="marca">Otávio<span>.</span></div>
+      <nav aria-label="Navegação principal">
+        <a href="#sobre">Sobre mim</a>
+        <a href="#projeto">Projeto</a>
+        <a href="#contato">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="apresentacao container">
+      <span class="etiqueta">Portfólio acadêmico</span>
+      <h1>Olá, eu sou <span>Otávio Fernando.</span></h1>
+      <p class="resumo">
+        Estudante de Tecnologia em Ciência de Dados, interessado em aprender,
+        desenvolver projetos e transformar ideias em soluções.
+      </p>
+      <a class="botao" href="#projeto">Conheça meu projeto</a>
+    </section>
+
+    <section class="container" id="sobre">
+      <span class="etiqueta">Quem sou eu</span>
+      <h2 class="titulo-secao">Sobre mim</h2>
+      <div class="sobre">
+        <p><strong>Nome:</strong> Otávio Fernando dos Santos</p>
+        <p><strong>Curso:</strong> Tecnologia em Ciência de Dados</p>
+        <p><strong>Faculdade:</strong> Faculdade de Tecnologia de Adamantina (FATEC)</p>
+        <p><strong>Uma frase sobre mim:</strong> Estudar e aprender.</p>
+      </div>
+    </section>
+
+    <section class="container" id="projeto">
+      <span class="etiqueta">Experiência acadêmica</span>
+      <h2 class="titulo-secao">Sistema de Otimização de Empresa</h2>
+      <p class="subtitulo">
+        Projeto desenvolvido durante o Ensino Médio, na ETEC, em conjunto com outros integrantes.
+      </p>
+
+      <div class="projeto-grid">
+        <article class="bloco">
+          <span class="numero">01 / PROBLEMA</span>
+          <h3>O desafio</h3>
+          <p>Falta de um método inovador para a contratação de festas, situação identificada no contexto da empresa.</p>
+        </article>
+
+        <article class="bloco">
+          <span class="numero">02 / O QUE EU FIZ</span>
+          <h3>Desenvolvimento</h3>
+          <p>Participei do desenvolvimento de um Trabalho de Conclusão de Curso (TCC), realizado juntamente com outros membros da equipe.</p>
+        </article>
+
+        <article class="bloco">
+          <span class="numero">03 / COMO FOI FEITO</span>
+          <h3>Pesquisa e criação</h3>
+          <p>Foram realizadas pesquisas por meio de questionários utilizando o Google Forms. Para a criação do site, foram utilizados diferentes sistemas de programação.</p>
+        </article>
+
+        <article class="bloco">
+          <span class="numero">04 / RESULTADO</span>
+          <h3>Resultado do projeto</h3>
+          <p>O projeto foi desenvolvido para apresentação. Não foram apresentados resultados numéricos.</p>
+        </article>
+      </div>
+
+      <div class="projeto-info">
+        <p><strong>Instituição em que o projeto foi realizado:</strong> ETEC, durante o Ensino Médio.</p>
+        <p><strong>Formato:</strong> Trabalho de Conclusão de Curso (TCC) em equipe.</p>
+      </div>
+    </section>
+
+    <section class="container" id="contato">
+      <span class="etiqueta">Meu perfil</span>
+      <h2 class="titulo-secao">GitHub</h2>
+      <div class="contato">
+        <div>
+          <h3>Veja meu perfil no GitHub</h3>
+          <p>Conheça meus projetos e atividades.</p>
+        </div>
+        <a href="https://github.com/otaviofernandofatec" target="_blank" rel="noopener noreferrer">
+          github.com/otaviofernandofatec
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">Otávio Fernando dos Santos · Portfólio acadêmico</div>
+  </footer>
+</body>
+</html>
